@@ -19,7 +19,15 @@ const ViewData = () => {
 		setTotalSalary(allTotalSalary.reduce((detailSalary, count) => count + detailSalary));
 	}
 
-	useEffect(() => { if (details.length !== 0) getTotalSalary() }, [details]);
+	useEffect(() => {
+		try {
+			if (details.length !== 0) {
+				getTotalSalary()
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	}, [details]);
 
 	return (
 		<div className={style.table_block}>
