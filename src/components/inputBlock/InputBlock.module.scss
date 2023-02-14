@@ -1,0 +1,14 @@
+.inner {
+	flex: 1 1 auto;
+	background: #b9a8a8;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+
+	& button {
+		max-width: 18.75rem;
+		width: 100%;
+	}
+}
