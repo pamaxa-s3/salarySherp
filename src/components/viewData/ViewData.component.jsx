@@ -12,14 +12,20 @@ const ViewData = () => {
 
 	const [totalSalary, setTotalSalary] = useState(0);
 
-	const getTotalSalary = () => {
-		const allTotalSalary = [];
 
-		details.forEach(({ timeOfTask, quantyOfTask, quantyOfReal, tarifClean }) => allTotalSalary.push(+(timeOfTask / quantyOfTask * quantyOfReal * tarifClean).toFixed(1)));
-		return allTotalSalary.reduce((detailSalary, count) => count + detailSalary);
-	}
 
-	useEffect(() => { if (details.length !== 0) setTotalSalary(getTotalSalary()) }, [details]);
+	useEffect(() => {
+		const getTotalSalary = () => {
+			const allTotalSalary = [];
+
+			details.forEach(({ timeOfTask, quantyOfTask, quantyOfReal, tarifClean }) => allTotalSalary.push(+(timeOfTask / quantyOfTask * quantyOfReal * tarifClean).toFixed(1)));
+			return allTotalSalary.reduce((detailSalary, count) => count + detailSalary);
+		}
+
+		if (details.length !== 0) {
+			setTotalSalary(getTotalSalary())
+		}
+	}, [details]);
 
 	return (
 		<div className={style.table_block}>
