@@ -86,7 +86,7 @@ const InputBlock = () => {
 				<InputGroup className="mt-3 mb-3">
 					<InputGroup.Text id="time-task">Время по заданию (полное)</InputGroup.Text>
 					<Form.Control
-						type='number'
+						type='text'
 						ref={ref2}
 						value={timeOfTask}
 						onChange={e => setTimeOfTask(+e.target.value)}
@@ -101,7 +101,7 @@ const InputBlock = () => {
 					<InputGroup.Text id="quantyOfTask">Количество по заданию</InputGroup.Text>
 					<Form.Control
 						ref={ref3}
-						type='number'
+						type='text'
 						value={quantyOfTask}
 						onChange={e => setQuantyOfTask(+e.target.value)}
 						placeholder='Введи количество по заданию'
@@ -115,7 +115,7 @@ const InputBlock = () => {
 					<InputGroup.Text id="quantyOfReal">Фактическое количество</InputGroup.Text>
 					<Form.Control
 						ref={ref4}
-						type='number'
+						type='text'
 						value={quantyOfReal}
 						onChange={e => setQuantyOfReal(+e.target.value)}
 						placeholder='Введи фактическое количество'
@@ -129,7 +129,7 @@ const InputBlock = () => {
 					<InputGroup.Text id="tarifERP">Тариф ERP</InputGroup.Text>
 					<Form.Control
 						ref={ref5}
-						type='number'
+						type='text'
 						value={tarifERP}
 						onChange={e => setTarifERP(+e.target.value)}
 						placeholder='Введи тариф ERP'
@@ -143,7 +143,7 @@ const InputBlock = () => {
 					<InputGroup.Text id="tarifClean">Чистая ставка</InputGroup.Text>
 					<Form.Control
 						ref={ref6}
-						type='number'
+						type='text'
 						value={tarifClean}
 						onChange={e => setTarifClean(+e.target.value)}
 						placeholder='Введи чистую ставку'
@@ -156,7 +156,7 @@ const InputBlock = () => {
 				<InputGroup className="mt-3 mb-3">
 					<InputGroup.Text id="timeToNeed">Время на изготовление фактического количества деталей</InputGroup.Text>
 					<Form.Control
-						type='number'
+						type='text'
 						disabled
 						value={timeToNeed}
 						onChange={e => setTimeToNeed(+e.target.value)}
@@ -170,7 +170,7 @@ const InputBlock = () => {
 				<InputGroup className="mt-3 mb-3">
 					<InputGroup.Text id="timeToOneDetal">Время на изготовление одной детали</InputGroup.Text>
 					<Form.Control
-						type='number'
+						type='text'
 						disabled
 						value={timeToOneDetal}
 						onChange={e => setTimeToOneDetal(+e.target.value)}
@@ -184,7 +184,7 @@ const InputBlock = () => {
 				<InputGroup className="mt-3 mb-3">
 					<InputGroup.Text id="moneyQuantyOfERP">Оплата до вычетов налогов</InputGroup.Text>
 					<Form.Control
-						type='number'
+						type='text'
 						disabled
 						value={moneyQuantyOfERP}
 						onChange={e => setMoneyQuantyOfERP(+e.target.value)}
@@ -198,7 +198,7 @@ const InputBlock = () => {
 				<InputGroup className="mt-3 mb-3">
 					<InputGroup.Text id="moneyQuantyOfClean">Оплата на руки</InputGroup.Text>
 					<Form.Control
-						type='number'
+						type='text'
 						disabled={true}
 						value={moneyQuantyOfClean}
 						onChange={e => setMoneyQuantyOfClean(+e.target.value)}
