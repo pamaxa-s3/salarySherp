@@ -85,7 +85,7 @@ const InputBlock = () => {
 
 				<InputGroup className="mt-3 mb-3">
 					<InputGroup.Text id="time-task">Время по заданию (полное)</InputGroup.Text>
-					<Input
+					<Form.Control
 						type="number" pattern="\d*"
 						ref={ref2}
 						value={timeOfTask}
