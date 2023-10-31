@@ -86,9 +86,7 @@ const InputBlock = () => {
 				<InputGroup className="mt-3 mb-3">
 					<InputGroup.Text id="time-task">Время по заданию (полное)</InputGroup.Text>
 					<Input
-						type="text"
-						inputmode="numeric"
-						pattern="[0-9]*"
+						type="number" pattern="\d*"
 						ref={ref2}
 						value={timeOfTask}
 						onChange={e => setTimeOfTask(+e.target.value)}
